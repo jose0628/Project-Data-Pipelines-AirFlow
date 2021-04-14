@@ -25,6 +25,24 @@ For each the test, the test result and expected result needs to be checked and i
 
 For example one test could be a SQL statement that checks if certain column contains NULL values by counting all the rows that have NULL in the column. We do not want to have any NULLs so expected result would be 0 and the test would compare the SQL statement's outcome to the expected result.
 
+## Project Structure
+
+    .
+    ├── app     
+    │   ├── run.py                           # Flask file that runs app
+    │   └── templates   
+    │       ├── go.html                      # Classification result page of web app
+    │       └── master.html                  # Main page of web app    
+    ├── data                   
+    │   ├── disaster_categories.csv          # Dataset including all the categories  
+    │   ├── disaster_messages.csv            # Dataset including all the messages
+    │   └── process_data.py                  # Data cleaning
+    ├── models
+    │   └── train_classifier.py              # Train ML model    
+    ├── pipeline_design     
+        │   ├── ETL Pipeline Preparation.ipynb   # Design of the ETL Pipeline
+        │   └── ML Pipeline Preparation.ipynb    # Design of the ML Pipeline       
+    └── README.md
 
 
 ## How to run
